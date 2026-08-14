@@ -215,3 +215,30 @@ h1 em { color: var(--orange); font-style: normal; }
 .hero-visual > * {
   display: none;
 }
+
+/* Custom office/meeting photograph */
+.meeting-room {
+  background-image: url("assets/images/meeting-room.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Hide the original generated meeting-room artwork */
+.meeting-room > * {
+  display: none;
+}
+
+
+/* Custom contact-section photograph */
+.workspace-art {
+  background-image: url("assets/images/contact-us.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Hide the original generated notebook and plant artwork */
+.workspace-art > * {
+  display: none;
+}
