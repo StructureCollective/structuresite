@@ -132,7 +132,15 @@ h1 em { color: var(--orange); font-style: normal; }
 .footer-grid h3 { margin: 0 0 17px; color: #fff; font-size: .72rem; letter-spacing: .09em; text-transform: uppercase; }
 .footer-grid a, .footer-grid p { display: block; margin: 7px 0; color: #bcc7d5; font-size: .82rem; }
 .footer-grid a:hover { color: var(--orange); }
-.footer-brand img { width: 230px; height: 115px; object-fit: contain; padding: 9px; background: white; }
+.footer-brand img {
+  width: 230px;
+  height: auto;
+  object-fit: contain;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
 .footer-brand p { color: var(--orange); font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .social-row { display: flex; gap: 10px; margin-top: 16px; }
 .social-row a { width: 34px; height: 34px; margin: 0; display: grid; place-items: center; border: 1px solid #44556b; border-radius: 50%; color: white; font-weight: 700; }
