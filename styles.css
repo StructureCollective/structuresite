@@ -203,7 +203,7 @@ h1 em { color: var(--orange); font-style: normal; }
 
 /* Custom hero photograph */
 .hero-visual {
-  background-image: url("assets/images/hero-workspace.jpg");
+  background-image: url("assets/images/hero-workspace..jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
