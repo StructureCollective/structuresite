@@ -200,3 +200,18 @@ h1 em { color: var(--orange); font-style: normal; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Custom hero photograph */
+.hero-visual {
+  background-image: url("assets/images/hero-workspace.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0 0 0 80px;
+  overflow: hidden;
+}
+
+/* Hide the original CSS-generated laptop artwork */
+.hero-visual > * {
+  display: none;
+}
