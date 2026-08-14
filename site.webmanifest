@@ -1,0 +1,11 @@
+{
+  "name": "Structure Collective",
+  "short_name": "Structure",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#07172c",
+  "icons": [
+    { "src": "assets/images/favicon-192.png", "sizes": "192x192", "type": "image/png" }
+  ]
+}
