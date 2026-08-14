@@ -250,3 +250,88 @@ h1 em { color: var(--orange); font-style: normal; }
 .workspace-art > * {
   display: none;
 }
+
+/* ============================================================
+   Service pages (hub + detail) — additions
+   Reuses existing tokens (--navy, --orange, --cream, --muted,
+   --line, --shadow, --container) so these match the rest of the site.
+   ============================================================ */
+
+a.service-card { display: block; cursor: pointer; }
+
+.breadcrumb { margin: 0 0 22px; color: var(--muted); font-size: .78rem; }
+.breadcrumb a { color: var(--navy); font-weight: 600; }
+.breadcrumb a:hover { color: var(--orange); }
+.breadcrumb span { margin: 0 6px; opacity: .5; }
+
+.service-hero { padding-top: 60px; padding-bottom: 60px; }
+.service-hero h1 { max-width: 760px; font-size: clamp(2.6rem, 5vw, 4.4rem); text-transform: none; }
+.service-hero .hero-intro { max-width: 640px; }
+
+.page-lead { max-width: 640px; margin: 22px auto 0; color: var(--muted); }
+
+.problem-section { background: var(--cream); }
+
+.problem-list, .included-list {
+  margin: 28px 0 0; padding: 0; list-style: none;
+  display: grid; gap: 16px;
+}
+.problem-list li, .included-list li {
+  position: relative; padding-left: 30px;
+  color: var(--muted); font-size: .96rem;
+}
+.problem-list li::before {
+  content: "\00d7"; position: absolute; left: 0; top: -2px;
+  color: var(--orange-dark); font-weight: 700; font-size: 1.1rem;
+}
+.included-list li::before {
+  content: "\2713"; position: absolute; left: 0; top: -1px;
+  color: var(--orange); font-weight: 700;
+}
+
+.feature-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 34px 28px; margin-top: 40px;
+}
+.feature-mark {
+  width: 52px; height: 52px; margin-bottom: 17px;
+  display: grid; place-items: center; border: 2px solid var(--orange);
+  border-radius: 50%; color: var(--orange);
+  font-family: "Playfair Display", serif; font-size: 1.3rem; font-weight: 700;
+}
+.feature h3 { margin: 0 0 10px; font-size: 1.03rem; line-height: 1.25; }
+.feature p { margin: 0; color: var(--muted); font-size: .87rem; }
+
+.process-list { counter-reset: step; margin: 40px 0 0; padding: 0; list-style: none; display: grid; gap: 30px; }
+.process-list li { position: relative; padding-left: 62px; }
+.process-list li::before {
+  counter-increment: step; content: counter(step, decimal-leading-zero);
+  position: absolute; left: 0; top: -4px; width: 44px; height: 44px;
+  display: grid; place-items: center; border-radius: 50%;
+  background: var(--navy); color: #fff;
+  font-family: "Playfair Display", serif; font-weight: 700; font-size: .92rem;
+}
+.process-list h3 { margin: 0 0 6px; font-size: 1.02rem; }
+.process-list p { margin: 0; color: var(--muted); font-size: .9rem; }
+
+.proof-placeholder {
+  max-width: 720px; margin: 40px auto 0; padding: 34px 38px;
+  border: 1px dashed var(--line); background: var(--cream);
+  text-align: center; color: var(--muted); font-size: .92rem;
+}
+.proof-placeholder strong { display: block; color: var(--navy); margin-bottom: 6px; }
+
+.related-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px; margin-top: 30px;
+}
+
+.faq-list { margin: 30px 0 0; display: grid; gap: 22px; max-width: 760px; }
+.faq-list dt { margin: 0 0 6px; font-family: "Playfair Display", serif; font-size: 1.05rem; color: var(--navy); }
+.faq-list dd { margin: 0; color: var(--muted); font-size: .92rem; }
+
+.cta-band .button { margin-top: 8px; }
+
+@media (max-width: 780px) {
+  .service-hero { padding-top: 30px; }
+}
