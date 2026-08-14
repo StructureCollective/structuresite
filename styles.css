@@ -218,7 +218,7 @@ h1 em { color: var(--orange); font-style: normal; }
 
 /* Custom office/meeting photograph */
 .meeting-room {
-  background-image: url("assets/images/meeting-room.jpeg");
+  background-image: url("assets/images/meeting-room.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -232,7 +232,7 @@ h1 em { color: var(--orange); font-style: normal; }
 
 /* Custom contact-section photograph */
 .workspace-art {
-  background-image: url("assets/images/contact-us.jpeg");
+  background-image: url("assets/images/contact-us.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
