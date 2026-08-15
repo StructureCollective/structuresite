@@ -326,6 +326,13 @@ a.service-card { display: block; cursor: pointer; }
   gap: 18px; margin-top: 30px;
 }
 
+.custom-icon-img {
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 19px;
+  object-fit: contain;
+}
+
 .faq-list { margin: 30px 0 0; display: grid; gap: 22px; max-width: 760px; }
 .faq-list dt { margin: 0 0 6px; font-family: "Playfair Display", serif; font-size: 1.05rem; color: var(--navy); }
 .faq-list dd { margin: 0; color: var(--muted); font-size: .92rem; }
