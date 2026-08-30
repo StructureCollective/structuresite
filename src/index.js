@@ -74,7 +74,7 @@ async function handleTestimonial(request, env) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: env.FROM_EMAIL || 'Structure Collective <testimonials@mail.structurecollective.com>',
+        from: env.FROM_EMAIL || 'Structure Collective <testimonials@structurecollective.com>',
         to: env.ADMIN_EMAIL || 'admin@structurecollective.com',
         subject: `Testimonial from ${name}`,
         html,
