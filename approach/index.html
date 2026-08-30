@@ -24,11 +24,13 @@
     .roadmap-section { position: relative; z-index: 0; background: var(--cream); border-top: 1px solid #f0eee9; overflow: hidden; }
     .roadmap-section .section-heading { margin-bottom: 8px; }
 
-    /* Animated wave background: layered filled "dune" ridges (light at the
-       seams, deepest orange at the center of each repeat) so the tile reads
-       as one continuous undulating field down the whole section, however
-       long the roadmap track ends up being, while still looping seamlessly
-       both vertically (tile top/bottom match) and horizontally (it drifts). */
+    /* Animated wave background: layered filled dune ridges, each an irregular
+       multi-peak silhouette (not a uniform sine) so crests overlap into the
+       band above at different heights, like a natural wave field rather
+       than a repeating stripe. Light at the seams, deepest orange at the
+       center of each repeat, so the tile reads as one continuous field down
+       the whole section and loops seamlessly both vertically (tile
+       top/bottom match) and horizontally (it drifts). */
     .roadmap-section::before {
       content: "";
       position: absolute;
@@ -38,7 +40,7 @@
       background-repeat: repeat;
       background-position: 0 0;
       background-size: 720px 600px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='720' height='600' viewBox='0 0 720 600'%3E%3Crect width='720' height='600' fill='%23fdf7f1'/%3E%3Cpath d='M0,130 Q180,85 360,130 T720,130 L720,600 L0,600 Z' fill='%23f5dcc3'/%3E%3Cpath d='M0,260 Q180,210 360,260 T720,260 L720,600 L0,600 Z' fill='%23e8a878'/%3E%3Cpath d='M0,390 Q180,345 360,390 T720,390 L720,600 L0,600 Z' fill='%23f5dcc3'/%3E%3Cpath d='M0,520 Q180,480 360,520 T720,520 L720,600 L0,600 Z' fill='%23fdf7f1'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='720' height='600' viewBox='0 0 720 600'%3E%3Crect width='720' height='600' fill='%23fdf7f1'/%3E%3Cpath d='M0,120 C11.7,110.3 45.0,63.7 70.0,62.0 C95.0,60.3 123.3,112.3 150.0,110.0 C176.7,107.7 200.0,50.5 230.0,48.0 C260.0,45.5 296.7,94.0 330.0,95.0 C363.3,96.0 395.0,51.2 430.0,54.0 C465.0,56.8 506.7,109.0 540.0,112.0 C573.3,115.0 600.0,70.7 630.0,72.0 C660.0,73.3 705.0,112.0 720.0,120.0 L720,600 L0,600 Z' fill='%23f5dcc3'/%3E%3Cpath d='M0,260 C10.0,248.3 36.7,193.3 60.0,190.0 C83.3,186.7 106.7,242.5 140.0,240.0 C173.3,237.5 223.3,174.2 260.0,175.0 C296.7,175.8 326.7,240.8 360.0,245.0 C393.3,249.2 426.7,202.5 460.0,200.0 C493.3,197.5 528.3,232.5 560.0,230.0 C591.7,227.5 623.3,180.0 650.0,185.0 C676.7,190.0 708.3,247.5 720.0,260.0 L720,600 L0,600 Z' fill='%23e8a878'/%3E%3Cpath d='M0,400 C13.3,391.7 51.7,350.8 80.0,350.0 C108.3,349.2 141.7,398.0 170.0,395.0 C198.3,392.0 220.0,334.5 250.0,332.0 C280.0,329.5 316.7,380.7 350.0,380.0 C383.3,379.3 416.7,326.7 450.0,328.0 C483.3,329.3 518.3,385.2 550.0,388.0 C581.7,390.8 611.7,343.0 640.0,345.0 C668.3,347.0 706.7,390.8 720.0,400.0 L720,600 L0,600 Z' fill='%23f5dcc3'/%3E%3Cpath d='M0,520 C10.8,512.5 38.3,477.0 65.0,475.0 C91.7,473.0 125.8,510.5 160.0,508.0 C194.2,505.5 233.3,461.0 270.0,460.0 C306.7,459.0 345.0,500.3 380.0,502.0 C415.0,503.7 446.7,468.3 480.0,470.0 C513.3,471.7 550.0,510.3 580.0,512.0 C610.0,513.7 636.7,478.7 660.0,480.0 C683.3,481.3 710.0,513.3 720.0,520.0 L720,600 L0,600 Z' fill='%23fdf7f1'/%3E%3C/svg%3E");
       opacity: .82;
       animation: roadmap-waves 40s linear infinite;
     }
