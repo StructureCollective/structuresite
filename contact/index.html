@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Get in touch with Structure Collective. Tell us what you need help with and we'll get back to you within 1-2 business days.">
+  <meta name="theme-color" content="#07172c">
+  <title>Contact | Structure Collective</title>
+  <link rel="canonical" href="https://structurecollective.com/contact/">
+  <link rel="icon" href="/assets/images/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/images/favicon-192.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    /* Contact page — page-scoped additions only */
+    .contact-panel {
+      max-width: 720px; margin: 0 auto; background: var(--white);
+      border: 1px solid var(--line); box-shadow: var(--shadow);
+      padding: 44px 48px;
+    }
+    .contact-panel label {
+      display: block; margin: 0 0 6px; color: var(--navy);
+      font-size: .8rem; font-weight: 700; letter-spacing: .03em; text-transform: uppercase;
+    }
+    .contact-field { margin: 0 0 24px; }
+    .contact-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .contact-field input[type="text"],
+    .contact-field input[type="email"],
+    .contact-field input[type="tel"],
+    .contact-field textarea {
+      width: 100%; padding: 13px 15px; border: 1px solid var(--line);
+      background: var(--cream); color: var(--navy); font-family: "DM Sans", sans-serif;
+      font-size: .95rem; box-sizing: border-box;
+    }
+    .contact-field textarea { min-height: 130px; resize: vertical; }
+    .contact-field input:focus, .contact-field textarea:focus {
+      outline: none; border-color: var(--orange);
+    }
+    .contact-field .field-hint { margin: 6px 0 0; color: var(--muted); font-size: .78rem; text-transform: none; font-weight: 500; letter-spacing: normal; }
+    .service-checks {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px;
+    }
+    .service-check {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 12px 14px; border: 1px solid var(--line); background: var(--cream);
+      cursor: pointer; transition: border-color .2s ease, background .2s ease;
+    }
+    .service-check:hover { border-color: var(--orange); }
+    .service-check input { margin-top: 3px; flex-shrink: 0; }
+    .service-check span {
+      text-transform: none; font-weight: 500; letter-spacing: normal;
+      color: var(--navy); font-size: .87rem; line-height: 1.35;
+    }
+    .contact-status { margin: 16px 0 0; font-size: .9rem; font-weight: 600; }
+    .contact-alt { max-width: 720px; margin: 26px auto 0; padding: 22px 26px; background: var(--cream); border: 1px solid var(--line); text-align: center; }
+    .contact-alt p { margin: 0 0 4px; color: var(--muted); font-size: .88rem; }
+    .contact-alt a { color: var(--orange); font-weight: 700; }
+
+    @media (max-width: 780px) {
+      .contact-panel { padding: 30px 24px; }
+      .contact-row, .service-checks { grid-template-columns: 1fr; }
+    }
+  </style>
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Structure Collective">
+  <meta property="og:title" content="Contact | Structure Collective">
+  <meta property="og:description" content="Get in touch with Structure Collective. Tell us what you need help with and we'll get back to you within 1-2 business days.">
+  <meta property="og:url" content="https://structurecollective.com/contact/">
+  <meta property="og:image" content="https://structurecollective.com/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact | Structure Collective">
+  <meta name="twitter:description" content="Get in touch with Structure Collective. Tell us what you need help with and we'll get back to you within 1-2 business days.">
+  <meta name="twitter:image" content="https://structurecollective.com/assets/images/og-image.png">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="home">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Structure Collective home">
+        <img src="/assets/images/structure-collective-logo.png" alt="Structure Collective">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span><span class="sr-only">Open menu</span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/services/">Services</a>
+        <a href="/about/">About</a>
+        <a href="/approach/">Approach</a>
+        <a class="active" href="/contact/">Contact</a>
+      </nav>
+      <a class="button button-small header-cta" data-consultation-link href="/schedule/">Schedule a consultation</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="service-hero section-pad">
+      <div class="container">
+        <p class="breadcrumb"><a href="/">Home</a> <span>/</span> <span>Contact</span></p>
+        <p class="eyebrow">Let's talk</p>
+        <h1 class="reveal">Get In Touch</h1>
+        <p class="hero-intro reveal">Tell us a bit about your business and what you need help with. We'll get back to you within 1-2 business days, or you can grab a time on our calendar directly.</p>
+        <div class="button-row">
+          <a class="button button-outline" data-consultation-link href="/schedule/">Schedule a consultation instead</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad" style="padding-top:0">
+      <div class="container">
+        <form class="contact-panel reveal" id="contactForm">
+          <div class="contact-row">
+            <div class="contact-field">
+              <label for="cName">Your name</label>
+              <input type="text" id="cName" name="name" required autocomplete="name">
+            </div>
+            <div class="contact-field">
+              <label for="cEmail">Email</label>
+              <input type="email" id="cEmail" name="email" required autocomplete="email">
+            </div>
+          </div>
+
+          <div class="contact-field">
+            <label for="cPhone">Phone <span style="font-weight:500;text-transform:none;">(optional)</span></label>
+            <input type="tel" id="cPhone" name="phone" autocomplete="tel">
+          </div>
+
+          <div class="contact-field">
+            <label>Services needed</label>
+            <p class="field-hint" style="margin:0 0 12px;">Select all that apply.</p>
+            <div class="service-checks">
+              <label class="service-check"><input type="checkbox" name="services" value="Workflow Optimization"><span>Workflow Optimization</span></label>
+              <label class="service-check"><input type="checkbox" name="services" value="Brand Development"><span>Brand Development</span></label>
+              <label class="service-check"><input type="checkbox" name="services" value="Website Design"><span>Website Design</span></label>
+              <label class="service-check"><input type="checkbox" name="services" value="Technology Integration"><span>Technology Integration</span></label>
+              <label class="service-check"><input type="checkbox" name="services" value="Operational Systems"><span>Operational Systems</span></label>
+              <label class="service-check"><input type="checkbox" name="services" value="Project Coordination"><span>Project Coordination</span></label>
+              <label class="service-check"><input type="checkbox" name="services" value="Not sure / just exploring"><span>Not sure / just exploring</span></label>
+            </div>
+          </div>
+
+          <div class="contact-field">
+            <label for="cMessage">Message <span style="font-weight:500;text-transform:none;">(optional)</span></label>
+            <textarea id="cMessage" name="message" placeholder="Tell us a bit about your business and what you're looking for."></textarea>
+          </div>
+
+          <button type="submit" class="button" id="contactSubmit">Send Message</button>
+          <p class="contact-status" id="contactStatus" role="status" aria-live="polite" hidden></p>
+        </form>
+
+        <div class="contact-alt reveal">
+          <p>Prefer to reach us directly?</p>
+          <p><a data-email-link href="mailto:admin@structurecollective.com">admin@structurecollective.com</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><img src="/assets/images/structure-collective-logo.png" alt="Structure Collective"><p>Operational strategy.<br>Smarter solutions.</p></div>
+      <div><h3>Quick links</h3><a href="/">Home</a><a href="/services/">Services</a><a href="/about/">About</a><a href="/approach/">Approach</a><a href="/contact/">Contact</a></div>
+      <div><h3>Services</h3>
+        <a href="/services/workflow-optimization/">Workflow Optimization</a>
+        <a href="/services/brand-development/">Brand Development</a>
+        <a href="/services/website-design/">Website Design</a>
+        <a href="/services/technology-integration/">Technology Integration</a>
+        <a href="/services/operational-systems/">Operational Systems</a>
+        <a href="/services/project-coordination/">Project Coordination</a>
+      </div>
+      <div><h3>Get in touch</h3><a data-email-link href="mailto:admin@structurecollective.com">admin@structurecollective.com</a><p data-location>Greensboro, NC</p><div class="social-row"><a data-instagram-link href="#" aria-label="Instagram">ig</a><a data-linkedin-link href="#" aria-label="LinkedIn">in</a></div></div>
+    </div>
+    <div class="container copyright">&copy; <span id="year"></span> Structure Collective. All rights reserved.</div>
+  </footer>
+
+  <script src="/site-config.js"></script>
+  <script src="/script.js"></script>
+  <script>
+    (() => {
+      const form = document.getElementById('contactForm');
+      const submitBtn = document.getElementById('contactSubmit');
+      const status = document.getElementById('contactStatus');
+
+      const showStatus = (message, isError) => {
+        status.textContent = message;
+        status.hidden = false;
+        status.style.color = isError ? '#cf3c16' : '#606a76';
+      };
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const name = document.getElementById('cName').value.trim();
+        const email = document.getElementById('cEmail').value.trim();
+        const phone = document.getElementById('cPhone').value.trim();
+        const message = document.getElementById('cMessage').value.trim();
+        const services = [...form.querySelectorAll('input[name="services"]:checked')].map(el => el.value);
+
+        if (!name || !email) {
+          showStatus('Please fill in your name and email.', true);
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        showStatus('', false);
+        status.hidden = true;
+
+        try {
+          const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, email, phone, services, message }),
+          });
+          const result = await response.json().catch(() => ({}));
+
+          if (response.ok) {
+            form.reset();
+            showStatus("Thanks! We've received your message and sent a confirmation to your email.", false);
+          } else {
+            showStatus(result.error || 'Something went wrong. Please try again.', true);
+          }
+        } catch (err) {
+          showStatus('Something went wrong. Please check your connection and try again.', true);
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
