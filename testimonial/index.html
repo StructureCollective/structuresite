@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Share your experience working with Structure Collective.">
+  <meta name="theme-color" content="#07172c">
+  <title>Share a Testimonial | Structure Collective</title>
+  <link rel="icon" href="/assets/images/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/images/favicon-192.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    /* Testimonial page — page-scoped additions only. This page is intentionally
+       not linked from the primary nav or footer; it's shared directly via email. */
+    .testimonial-panel {
+      max-width: 720px; margin: 0 auto; background: var(--white);
+      border: 1px solid var(--line); box-shadow: var(--shadow);
+      padding: 44px 48px;
+    }
+    .testimonial-panel label {
+      display: block; margin: 0 0 6px; color: var(--navy);
+      font-size: .8rem; font-weight: 700; letter-spacing: .03em; text-transform: uppercase;
+    }
+    .testimonial-field { margin: 0 0 24px; }
+    .testimonial-field input[type="text"],
+    .testimonial-field textarea {
+      width: 100%; padding: 13px 15px; border: 1px solid var(--line);
+      background: var(--cream); color: var(--navy); font-family: "DM Sans", sans-serif;
+      font-size: .95rem; box-sizing: border-box;
+    }
+    .testimonial-field textarea { min-height: 150px; resize: vertical; }
+    .testimonial-field input:focus, .testimonial-field textarea:focus {
+      outline: none; border-color: var(--orange);
+    }
+    .consent-row { display: flex; align-items: flex-start; gap: 10px; margin: 0 0 28px; }
+    .consent-row input { margin-top: 4px; }
+    .consent-row label { margin: 0; text-transform: none; font-weight: 500; font-size: .88rem; color: var(--muted); letter-spacing: normal; }
+    .testimonial-note { max-width: 720px; margin: 18px auto 0; text-align: center; color: var(--muted); font-size: .85rem; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="home">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Structure Collective home">
+        <img src="/assets/images/structure-collective-logo.png" alt="Structure Collective">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span><span class="sr-only">Open menu</span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/services/">Services</a>
+        <a href="/about/">About</a>
+        <a href="/#approach">Approach</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+      <a class="button button-small header-cta" data-consultation-link href="/schedule/">Schedule a consultation</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="service-hero section-pad">
+      <div class="container">
+        <p class="eyebrow">Thank you</p>
+        <h1 class="reveal">Share Your Experience</h1>
+        <p class="hero-intro reveal">We'd love to hear how working together went. Your testimonial helps other growing businesses feel confident reaching out, and it only takes a couple minutes.</p>
+      </div>
+    </section>
+
+    <section class="section-pad" style="padding-top:0">
+      <div class="container">
+        <form class="testimonial-panel reveal" id="testimonialForm">
+          <div class="testimonial-field">
+            <label for="tName">Your name</label>
+            <input type="text" id="tName" name="name" required>
+          </div>
+          <div class="testimonial-field">
+            <label for="tCompany">Company / role (optional)</label>
+            <input type="text" id="tCompany" name="company">
+          </div>
+          <div class="testimonial-field">
+            <label for="tTestimonial">Your testimonial</label>
+            <textarea id="tTestimonial" name="testimonial" required placeholder="What was it like working with Structure Collective? What changed for your business?"></textarea>
+          </div>
+          <div class="consent-row">
+            <input type="checkbox" id="tConsent" name="consent">
+            <label for="tConsent">It's okay to use my name and company alongside this testimonial on the Structure Collective website and marketing materials.</label>
+          </div>
+          <button type="submit" class="button">Send Testimonial</button>
+        </form>
+        <p class="testimonial-note">Submitting opens your email client with your testimonial filled in, ready to send to us directly.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><img src="/assets/images/structure-collective-logo.png" alt="Structure Collective"><p>Operational strategy.<br>Smarter solutions.</p></div>
+      <div><h3>Quick links</h3><a href="/">Home</a><a href="/services/">Services</a><a href="/about/">About</a><a href="/#approach">Approach</a><a href="/#contact">Contact</a></div>
+      <div><h3>Services</h3>
+        <a href="/services/workflow-optimization/">Workflow Optimization</a>
+        <a href="/services/brand-development/">Brand Development</a>
+        <a href="/services/website-design/">Website Design</a>
+        <a href="/services/technology-integration/">Technology Integration</a>
+        <a href="/services/operational-systems/">Operational Systems</a>
+        <a href="/services/project-coordination/">Project Coordination</a>
+      </div>
+      <div><h3>Get in touch</h3><a data-email-link href="mailto:admin@structurecollective.com">admin@structurecollective.com</a><p data-location>Greensboro, NC</p><div class="social-row"><a data-instagram-link href="#" aria-label="Instagram">ig</a><a data-linkedin-link href="#" aria-label="LinkedIn">in</a></div></div>
+    </div>
+    <div class="container copyright">&copy; <span id="year"></span> Structure Collective. All rights reserved.</div>
+  </footer>
+
+  <script src="/site-config.js"></script>
+  <script src="/script.js"></script>
+  <script>
+    (() => {
+      const form = document.getElementById('testimonialForm');
+      const config = window.STRUCTURE_COLLECTIVE_CONFIG || {};
+      const email = config.email || 'admin@structurecollective.com';
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('tName').value.trim();
+        const company = document.getElementById('tCompany').value.trim();
+        const testimonial = document.getElementById('tTestimonial').value.trim();
+        const consent = document.getElementById('tConsent').checked ? 'Yes' : 'No';
+        const subject = encodeURIComponent(`Testimonial from ${name}`);
+        const bodyLines = [
+          `Name: ${name}`,
+          company ? `Company / role: ${company}` : null,
+          `Okay to use name and company publicly: ${consent}`,
+          '',
+          'Testimonial:',
+          testimonial,
+        ].filter(Boolean);
+        const body = encodeURIComponent(bodyLines.join('\n'));
+        window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!--
+  Structure Collective: Proposal-Sent Confirmation Email Template
+  ----------------------------------------------------------------
+  Use this one right after you send a proposal, usually straight after
+  a discovery call. It confirms the proposal is on its way and sets
+  expectations for what's next. (follow-up-email.html is the later
+  chaser if you haven't heard back after a few days.)
+
+  How to use:
+  1. Open in Sublime Text (not TextEdit; Rich Text/Smart Quotes corrupt HTML).
+  2. Find-and-replace the bracketed placeholders:
+       [Client Name]     -> the recipient's name
+       [Service Name]    -> the service the proposal covers
+       [Proposal Summary]-> one or two lines on what's included / scope
+       [Response Window] -> how long the proposal is valid / when to expect a reply, e.g. "the next 2 weeks"
+  3. Attach the actual proposal document (PDF) to the email; this template
+     assumes the proposal is an attachment, not a link.
+  4. Select everything inside <div id="email-content"> ... </div> (not this
+     comment block), copy, and paste into a new Gmail/Outlook compose window.
+  5. Matches structurecollective.com's live color palette and typography
+     (navy #07172c / orange #f26a16, DM Sans + Playfair Display) as of Aug 2026.
+-->
+<div id="email-content" style="font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;max-width:600px;margin:0 auto;background:#fbfaf7;">
+
+  <!-- Top wordmark -->
+  <div style="padding:28px 32px 20px;text-align:left;">
+    <img src="https://structurecollective.com/assets/images/structure-collective-logo.png" alt="Structure Collective" style="height:48px;width:auto;display:block;">
+  </div>
+
+  <!-- Card -->
+  <div style="background:#ffffff;margin:0 24px;border:1px solid #e7e4df;box-shadow:0 18px 50px rgba(7,23,44,0.09);">
+
+    <!-- Navy header -->
+    <div style="background:#07172c;padding:26px 36px;">
+      <p style="margin:0;color:#ffffff;font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:600;letter-spacing:.01em;">Your proposal is attached</p>
+    </div>
+
+    <!-- Body -->
+    <div style="padding:34px 36px 8px;color:#07172c;font-size:15px;line-height:1.65;">
+      <p style="margin:0 0 18px;">Hi, [Client Name]</p>
+
+      <p style="margin:0 0 18px;">Thank you for taking the time to talk through your goals with us. As promised, I've attached our proposal for <strong>[Service Name]</strong>. Take a look whenever you get a chance.</p>
+
+      <div style="background:#fbfaf7;border:1px solid #e7e4df;padding:18px 20px;margin:0 0 24px;">
+        <p style="margin:0 0 8px;font-weight:700;color:#07172c;">What's included</p>
+        <p style="margin:0;color:#606a76;">[Proposal Summary]</p>
+      </div>
+
+      <p style="margin:0 0 18px;">This proposal is good for [Response Window]. If anything needs adjusting (scope, timeline, budget), just let me know, and I'm happy to hop on a call to walk through it together.</p>
+
+      <!-- CTA button, matches .button style: sharp corners, orange fill, uppercase bold -->
+      <div style="text-align:left;margin:0 0 28px;">
+        <a href="https://structurecollective.com/schedule/" style="display:inline-block;background:#f26a16;color:#ffffff;text-decoration:none;font-weight:700;text-transform:uppercase;letter-spacing:.035em;font-size:13px;padding:0 24px;line-height:48px;min-height:48px;">Schedule a Review Call</a>
+      </div>
+
+      <p style="margin:0 0 6px;">Looking forward to hearing your thoughts.</p>
+      <p style="margin:0 0 28px;">Best,<br>B. Nickole | Owner<br>Structure Collective</p>
+    </div>
+  </div>
+
+  <!-- Footer, matches .site-footer: solid navy background -->
+  <div style="background:#07172c;padding:26px 36px;margin-top:24px;text-align:center;">
+    <div style="margin:0 0 6px;">
+      <img src="https://structurecollective.com/assets/images/favicon-192.png" alt="" width="16" height="16" style="height:16px;width:16px;vertical-align:middle;margin-right:6px;">
+      <span style="color:#bcc7d5;font-size:12px;letter-spacing:.02em;vertical-align:middle;">Structure Collective</span>
+    </div>
+    <p style="margin:0;color:#91a0b2;font-size:11px;">structurecollective.com</p>
+  </div>
+
+</div>
