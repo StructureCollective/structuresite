@@ -41,6 +41,7 @@
     .consent-row input { margin-top: 4px; }
     .consent-row label { margin: 0; text-transform: none; font-weight: 500; font-size: .88rem; color: var(--muted); letter-spacing: normal; }
     .testimonial-note { max-width: 720px; margin: 18px auto 0; text-align: center; color: var(--muted); font-size: .85rem; }
+    .testimonial-status { margin: 16px 0 0; font-size: .9rem; font-weight: 600; }
   </style>
 </head>
 <body>
@@ -93,9 +94,9 @@
             <input type="checkbox" id="tConsent" name="consent">
             <label for="tConsent">It's okay to use my name and company alongside this testimonial on the Structure Collective website and marketing materials.</label>
           </div>
-          <button type="submit" class="button">Send Testimonial</button>
+          <button type="submit" class="button" id="testimonialSubmit">Send Testimonial</button>
+          <p class="testimonial-status" id="testimonialStatus" role="status" aria-live="polite" hidden></p>
         </form>
-        <p class="testimonial-note">Submitting opens your email client with your testimonial filled in, ready to send to us directly.</p>
       </div>
     </section>
   </main>
@@ -122,25 +123,52 @@
   <script>
     (() => {
       const form = document.getElementById('testimonialForm');
-      const config = window.STRUCTURE_COLLECTIVE_CONFIG || {};
-      const email = config.email || 'admin@structurecollective.com';
-      form.addEventListener('submit', (e) => {
+      const submitBtn = document.getElementById('testimonialSubmit');
+      const status = document.getElementById('testimonialStatus');
+
+      const showStatus = (message, isError) => {
+        status.textContent = message;
+        status.hidden = false;
+        status.style.color = isError ? '#cf3c16' : '#606a76';
+      };
+
+      form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const name = document.getElementById('tName').value.trim();
         const company = document.getElementById('tCompany').value.trim();
         const testimonial = document.getElementById('tTestimonial').value.trim();
-        const consent = document.getElementById('tConsent').checked ? 'Yes' : 'No';
-        const subject = encodeURIComponent(`Testimonial from ${name}`);
-        const bodyLines = [
-          `Name: ${name}`,
-          company ? `Company / role: ${company}` : null,
-          `Okay to use name and company publicly: ${consent}`,
-          '',
-          'Testimonial:',
-          testimonial,
-        ].filter(Boolean);
-        const body = encodeURIComponent(bodyLines.join('\n'));
-        window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+        const consent = document.getElementById('tConsent').checked;
+
+        if (!name || !testimonial) {
+          showStatus('Please fill in your name and testimonial.', true);
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        showStatus('', false);
+        status.hidden = true;
+
+        try {
+          const response = await fetch('/api/testimonial', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name, company, testimonial, consent }),
+          });
+          const result = await response.json().catch(() => ({}));
+
+          if (response.ok) {
+            form.reset();
+            showStatus('Thank you! Your testimonial has been sent.', false);
+          } else {
+            showStatus(result.error || 'Something went wrong. Please try again.', true);
+          }
+        } catch (err) {
+          showStatus('Something went wrong. Please check your connection and try again.', true);
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Testimonial';
+        }
       });
     })();
   </script>
