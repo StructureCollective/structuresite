@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="See how a Structure Collective engagement unfolds, from the first discovery call through build, launch, and the ongoing support that follows.">
+  <meta name="theme-color" content="#07172c">
+  <title>Our Approach | Structure Collective</title>
+  <link rel="canonical" href="https://structurecollective.com/approach/">
+  <link rel="icon" href="/assets/images/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/images/favicon-192.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    /* Approach page — page-scoped additions only */
+
+    .pillars-section { padding-top: 60px; padding-bottom: 40px; }
+    .pillars-section .section-heading { margin-bottom: 36px; }
+
+    .roadmap-section { background: var(--cream); border-top: 1px solid #f0eee9; overflow: hidden; }
+    .roadmap-section .section-heading { margin-bottom: 8px; }
+    .roadmap-lead { max-width: 640px; margin: 18px auto 0; text-align: center; color: var(--muted); font-size: .96rem; }
+
+    .roadmap-track { position: relative; max-width: 920px; margin: 76px auto 0; padding-bottom: 30px; }
+    .roadmap-spine { position: absolute; top: 6px; bottom: 30px; left: 50%; width: 3px; background: var(--line); transform: translateX(-50%); }
+    .roadmap-spine-fill { position: absolute; top: 0; left: 0; width: 100%; height: 0%; background: var(--orange); transition: height .1s linear; }
+
+    .roadmap-item {
+      position: relative; width: 50%; box-sizing: border-box; padding: 0 56px 90px;
+      opacity: .3; filter: grayscale(.9) blur(2px); transform: translateY(12px) scale(.97);
+      transition: opacity .5s ease, filter .5s ease, transform .5s ease;
+    }
+    .roadmap-item.side-left { left: 0; text-align: right; }
+    .roadmap-item.side-right { left: 50%; text-align: left; }
+    .roadmap-dot {
+      position: absolute; top: 4px; width: 16px; height: 16px; border-radius: 50%;
+      background: var(--white); border: 3px solid #c9c4ba; transition: .4s ease;
+    }
+    .roadmap-item.side-left .roadmap-dot { right: -9px; }
+    .roadmap-item.side-right .roadmap-dot { left: -9px; }
+    .roadmap-item.active { opacity: 1; filter: none; transform: none; }
+    .roadmap-item.active .roadmap-dot { background: var(--orange); border-color: var(--orange); box-shadow: 0 0 0 7px rgba(242,106,22,.16); }
+
+    .roadmap-card {
+      display: inline-block; max-width: 380px; padding: 26px 28px; text-align: left;
+      background: var(--white); border: 1px solid var(--line); box-shadow: 0 10px 26px rgba(7,23,44,.06);
+    }
+    .roadmap-num { display: block; margin-bottom: 8px; color: var(--orange); font-family: "Playfair Display", serif; font-weight: 700; font-size: 1.1rem; }
+    .roadmap-card h3 { margin: 0 0 8px; font-size: 1.05rem; line-height: 1.25; }
+    .roadmap-card p { margin: 0; color: var(--muted); font-size: .88rem; line-height: 1.6; }
+
+    .roadmap-fork { position: relative; padding-top: 10px; }
+    .roadmap-dot-fork { position: absolute; top: -6px; left: 50%; transform: translateX(-50%); }
+    .roadmap-fork-cards {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 26px; max-width: 780px; margin: 36px auto 0;
+      opacity: .3; filter: grayscale(.9) blur(2px); transform: translateY(12px) scale(.97);
+      transition: opacity .5s ease, filter .5s ease, transform .5s ease;
+    }
+    .roadmap-fork.active .roadmap-fork-cards { opacity: 1; filter: none; transform: none; }
+    .roadmap-fork.active .roadmap-dot-fork { background: var(--orange); border-color: var(--orange); box-shadow: 0 0 0 7px rgba(242,106,22,.16); }
+    .roadmap-card-fork { max-width: none; text-align: center; }
+    .roadmap-fork-label { margin: 0 0 14px; color: var(--muted); font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; text-align: center; }
+
+    @media (max-width: 780px) {
+      .roadmap-track { margin-top: 56px; }
+      .roadmap-spine { left: 20px; }
+      .roadmap-item { width: 100%; padding: 0 0 60px 56px; text-align: left !important; }
+      .roadmap-item.side-left, .roadmap-item.side-right { left: 0; }
+      .roadmap-item .roadmap-dot { right: auto !important; left: 12px !important; }
+      .roadmap-card { max-width: none; }
+      .roadmap-fork-cards { grid-template-columns: 1fr; margin-left: 56px; margin-right: 0; max-width: none; }
+      .roadmap-dot-fork { left: 20px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .roadmap-item, .roadmap-fork-cards { transition: none; }
+    }
+  </style>
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Structure Collective">
+  <meta property="og:title" content="Our Approach | Structure Collective">
+  <meta property="og:description" content="See how a Structure Collective engagement unfolds, from the first discovery call through build, launch, and the ongoing support that follows.">
+  <meta property="og:url" content="https://structurecollective.com/approach/">
+  <meta property="og:image" content="https://structurecollective.com/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Approach | Structure Collective">
+  <meta name="twitter:description" content="See how a Structure Collective engagement unfolds, from the first discovery call through build, launch, and the ongoing support that follows.">
+  <meta name="twitter:image" content="https://structurecollective.com/assets/images/og-image.png">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="home">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Structure Collective home">
+        <img src="/assets/images/structure-collective-logo.png" alt="Structure Collective">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span><span class="sr-only">Open menu</span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/services/">Services</a>
+        <a href="/about/">About</a>
+        <a class="active" href="/approach/">Approach</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+      <a class="button button-small header-cta" data-consultation-link href="/schedule/">Schedule a consultation</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="service-hero section-pad">
+      <div class="container">
+        <p class="breadcrumb"><a href="/">Home</a> <span>/</span> <span>Approach</span></p>
+        <p class="eyebrow">How we work</p>
+        <h1 class="reveal">Our Approach</h1>
+        <p class="hero-intro reveal">Every engagement follows the same clear path, so you always know what's happening, what's next, and who's responsible for it. Here's what working with Structure Collective actually looks like, from the first conversation to long-term support.</p>
+        <div class="button-row">
+          <a class="button" data-consultation-link href="/schedule/">Schedule a consultation</a>
+          <a class="button button-outline" href="/services/">View our services</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pillars-section">
+      <div class="container">
+        <header class="section-heading reveal">
+          <p class="eyebrow">Why businesses choose us</p>
+          <h2>A strategic partner you can count on</h2>
+        </header>
+        <div class="benefit-grid">
+          <article class="benefit reveal"><div class="benefit-mark">A</div><h3>Strategic Approach</h3><p>Solutions driven by analysis, planning, and real-world business insight.</p></article>
+          <article class="benefit reveal"><div class="benefit-mark">R</div><h3>Results Focused</h3><p>We focus on measurable improvements that drive performance.</p></article>
+          <article class="benefit reveal"><div class="benefit-mark">P</div><h3>Personalized Support</h3><p>Every business is unique. We tailor solutions to your specific needs.</p></article>
+          <article class="benefit reveal"><div class="benefit-mark">M</div><h3>Modern Solutions</h3><p>Leveraging the right tools and systems to help you work smarter.</p></article>
+          <article class="benefit reveal"><div class="benefit-mark">R</div><h3>Reliable Partner</h3><p>We are committed to your success from start to long-term growth.</p></article>
+          <article class="benefit reveal"><div class="benefit-mark">X</div><h3>Cross-Industry Experience</h3><p>Diverse experience across industries and operational environments.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="roadmap-section section-pad" id="roadmap">
+      <div class="container">
+        <header class="section-heading reveal">
+          <p class="eyebrow">The engagement roadmap</p>
+          <h2>From kickoff to hand-off, and beyond</h2>
+        </header>
+        <p class="roadmap-lead reveal">Scroll to follow a project step by step, from the first call to the systems, brand, or site running on their own.</p>
+      </div>
+
+      <div class="roadmap-track">
+        <div class="roadmap-spine" aria-hidden="true"><span class="roadmap-spine-fill"></span></div>
+
+        <div class="roadmap-item side-left">
+          <div class="roadmap-dot"></div>
+          <div class="roadmap-card">
+            <span class="roadmap-num">01</span>
+            <h3>Discovery Call</h3>
+            <p>We start with a conversation, your goals, pain points, and what "better" looks like for your business.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item side-right">
+          <div class="roadmap-dot"></div>
+          <div class="roadmap-card">
+            <span class="roadmap-num">02</span>
+            <h3>Proposal &amp; Roadmap</h3>
+            <p>You get a clear scope, timeline, and investment laid out plainly, no surprises before anything begins.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item side-left">
+          <div class="roadmap-dot"></div>
+          <div class="roadmap-card">
+            <span class="roadmap-num">03</span>
+            <h3>Kickoff</h3>
+            <p>We align on access, communication rhythm, and what success looks like for the engagement.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item side-right">
+          <div class="roadmap-dot"></div>
+          <div class="roadmap-card">
+            <span class="roadmap-num">04</span>
+            <h3>Build &amp; Implement</h3>
+            <p>We design and build the systems, workflows, brand, or site laid out in the roadmap.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item side-left">
+          <div class="roadmap-dot"></div>
+          <div class="roadmap-card">
+            <span class="roadmap-num">05</span>
+            <h3>Review &amp; Refine</h3>
+            <p>You test it, we gather feedback, and refine the details before anything goes live.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item side-right">
+          <div class="roadmap-dot"></div>
+          <div class="roadmap-card">
+            <span class="roadmap-num">06</span>
+            <h3>Launch</h3>
+            <p>Everything goes live, documented and ready for your team to run with.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-fork">
+          <div class="roadmap-dot roadmap-dot-fork"></div>
+          <p class="roadmap-fork-label">Where the engagement goes from here</p>
+          <div class="roadmap-fork-cards">
+            <div class="roadmap-card roadmap-card-fork">
+              <span class="roadmap-num">07A</span>
+              <h3>Hand-off</h3>
+              <p>A clean transfer of ownership, documentation, and training, you're fully equipped to run it yourselves.</p>
+            </div>
+            <div class="roadmap-card roadmap-card-fork">
+              <span class="roadmap-num">07B</span>
+              <h3>Ongoing Support</h3>
+              <p>Recurring support built around the systems we put in place, so you're never without a partner.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Ready to get started?</p>
+          <h2>Let's build better<br>structure together</h2>
+          <p>Whether you're improving operations, refreshing your brand, or implementing new systems, Structure Collective provides strategic support designed to help your business thrive.</p>
+          <a class="button" data-consultation-link href="/schedule/">Contact us today</a>
+        </div>
+        <div class="workspace-art reveal" aria-hidden="true">
+          <div class="paper"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="pen"></div><div class="mini-plant"><b></b></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><img src="/assets/images/structure-collective-logo.png" alt="Structure Collective"><p>Operational strategy.<br>Smarter solutions.</p></div>
+      <div><h3>Quick links</h3><a href="/">Home</a><a href="/services/">Services</a><a href="/about/">About</a><a href="/approach/">Approach</a><a href="/#contact">Contact</a></div>
+      <div><h3>Services</h3>
+        <a href="/services/workflow-optimization/">Workflow Optimization</a>
+        <a href="/services/brand-development/">Brand Development</a>
+        <a href="/services/website-design/">Website Design</a>
+        <a href="/services/technology-integration/">Technology Integration</a>
+        <a href="/services/operational-systems/">Operational Systems</a>
+        <a href="/services/project-coordination/">Project Coordination</a>
+      </div>
+      <div><h3>Get in touch</h3><a data-email-link href="mailto:admin@structurecollective.com">admin@structurecollective.com</a><p data-location>Greensboro, NC</p><div class="social-row"><a data-instagram-link href="#" aria-label="Instagram">ig</a><a data-linkedin-link href="#" aria-label="LinkedIn">in</a></div></div>
+    </div>
+    <div class="container copyright">© <span id="year"></span> Structure Collective. All rights reserved.</div>
+  </footer>
+
+  <script src="/site-config.js"></script>
+  <script src="/script.js"></script>
+  <script>
+    (() => {
+      const track = document.querySelector('.roadmap-track');
+      const fill = document.querySelector('.roadmap-spine-fill');
+      const items = document.querySelectorAll('.roadmap-item, .roadmap-fork');
+
+      function updateSpine() {
+        if (!track || !fill) return;
+        const rect = track.getBoundingClientRect();
+        const vh = window.innerHeight;
+        const total = rect.height;
+        const scrolled = Math.min(Math.max((vh * 0.5) - rect.top, 0), total);
+        fill.style.height = (total ? (scrolled / total * 100) : 0) + '%';
+      }
+      window.addEventListener('scroll', updateSpine, { passive: true });
+      window.addEventListener('resize', updateSpine);
+      updateSpine();
+
+      if ('IntersectionObserver' in window) {
+        const obs = new IntersectionObserver(entries => {
+          entries.forEach(entry => entry.target.classList.toggle('active', entry.isIntersecting));
+        }, { threshold: .5, rootMargin: '-18% 0px -18% 0px' });
+        items.forEach(item => obs.observe(item));
+      } else {
+        items.forEach(item => item.classList.add('active'));
+      }
+    })();
+  </script>
+</body>
+</html>
