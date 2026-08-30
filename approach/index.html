@@ -19,6 +19,7 @@
 
     .pillars-section { padding-top: 60px; padding-bottom: 40px; }
     .pillars-section .section-heading { margin-bottom: 36px; }
+    .benefit-mark svg { width: 24px; height: 24px; stroke: var(--navy); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 
     .roadmap-section { background: var(--cream); border-top: 1px solid #f0eee9; overflow: hidden; }
     .roadmap-section .section-heading { margin-bottom: 8px; }
@@ -45,12 +46,24 @@
     .roadmap-item.active .roadmap-dot { background: var(--orange); border-color: var(--orange); box-shadow: 0 0 0 7px rgba(242,106,22,.16); }
 
     .roadmap-card {
-      display: inline-block; max-width: 380px; padding: 26px 28px; text-align: left;
+      display: inline-block; max-width: 400px; padding: 28px 30px; text-align: left;
       background: var(--white); border: 1px solid var(--line); box-shadow: 0 10px 26px rgba(7,23,44,.06);
     }
+    .roadmap-icon {
+      width: 46px; height: 46px; margin-bottom: 14px; display: grid; place-items: center;
+      border: 2px solid var(--orange); border-radius: 50%; color: var(--orange);
+    }
+    .roadmap-icon svg { width: 22px; height: 22px; stroke: var(--orange); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
     .roadmap-num { display: block; margin-bottom: 8px; color: var(--orange); font-family: "Playfair Display", serif; font-weight: 700; font-size: 1.1rem; }
     .roadmap-card h3 { margin: 0 0 8px; font-size: 1.05rem; line-height: 1.25; }
     .roadmap-card p { margin: 0; color: var(--muted); font-size: .88rem; line-height: 1.6; }
+    .roadmap-details { margin: 16px 0 0; padding: 0; list-style: none; display: grid; gap: 7px; }
+    .roadmap-details li { position: relative; padding-left: 18px; color: var(--muted); font-size: .82rem; line-height: 1.5; }
+    .roadmap-details li::before { content: ""; position: absolute; left: 0; top: 7px; width: 6px; height: 6px; border-radius: 50%; background: var(--orange); }
+    .roadmap-tag {
+      display: inline-block; margin-top: 18px; padding: 5px 14px; border: 1px solid var(--line); border-radius: 999px;
+      background: var(--cream); color: var(--navy); font-size: .7rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+    }
 
     .roadmap-fork { position: relative; padding-top: 10px; }
     .roadmap-dot-fork { position: absolute; top: -6px; left: 50%; transform: translateX(-50%); }
@@ -62,6 +75,8 @@
     .roadmap-fork.active .roadmap-fork-cards { opacity: 1; filter: none; transform: none; }
     .roadmap-fork.active .roadmap-dot-fork { background: var(--orange); border-color: var(--orange); box-shadow: 0 0 0 7px rgba(242,106,22,.16); }
     .roadmap-card-fork { max-width: none; text-align: center; }
+    .roadmap-card-fork .roadmap-icon { margin-left: auto; margin-right: auto; }
+    .roadmap-card-fork .roadmap-details { max-width: 280px; margin: 16px auto 0; text-align: left; }
     .roadmap-fork-label { margin: 0 0 14px; color: var(--muted); font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; text-align: center; }
 
     @media (max-width: 780px) {
@@ -136,12 +151,12 @@
           <h2>A strategic partner you can count on</h2>
         </header>
         <div class="benefit-grid">
-          <article class="benefit reveal"><div class="benefit-mark">A</div><h3>Strategic Approach</h3><p>Solutions driven by analysis, planning, and real-world business insight.</p></article>
-          <article class="benefit reveal"><div class="benefit-mark">R</div><h3>Results Focused</h3><p>We focus on measurable improvements that drive performance.</p></article>
-          <article class="benefit reveal"><div class="benefit-mark">P</div><h3>Personalized Support</h3><p>Every business is unique. We tailor solutions to your specific needs.</p></article>
-          <article class="benefit reveal"><div class="benefit-mark">M</div><h3>Modern Solutions</h3><p>Leveraging the right tools and systems to help you work smarter.</p></article>
-          <article class="benefit reveal"><div class="benefit-mark">R</div><h3>Reliable Partner</h3><p>We are committed to your success from start to long-term growth.</p></article>
-          <article class="benefit reveal"><div class="benefit-mark">X</div><h3>Cross-Industry Experience</h3><p>Diverse experience across industries and operational environments.</p></article>
+          <article class="benefit reveal"><div class="benefit-mark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.3 8.7l-2.1 4.5-4.5 2.1 2.1-4.5 4.5-2.1z"/></svg></div><h3>Strategic Approach</h3><p>Solutions driven by analysis, planning, and real-world business insight.</p></article>
+          <article class="benefit reveal"><div class="benefit-mark"><svg viewBox="0 0 24 24"><path d="M4 16l5-5 3 3 7-7"/><path d="M15 7h4v4"/></svg></div><h3>Results Focused</h3><p>We focus on measurable improvements that drive performance.</p></article>
+          <article class="benefit reveal"><div class="benefit-mark"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"/><path d="M5.5 20c1-3.5 4-5 6.5-5s5.5 1.5 6.5 5"/></svg></div><h3>Personalized Support</h3><p>Every business is unique. We tailor solutions to your specific needs.</p></article>
+          <article class="benefit reveal"><div class="benefit-mark"><svg viewBox="0 0 24 24"><path d="M13 3L6 14h5l-1 7 8-12h-5l1-6z"/></svg></div><h3>Modern Solutions</h3><p>Leveraging the right tools and systems to help you work smarter.</p></article>
+          <article class="benefit reveal"><div class="benefit-mark"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6l7-3z"/><path d="M9 12.3l2 2 4-4.3"/></svg></div><h3>Reliable Partner</h3><p>We are committed to your success from start to long-term growth.</p></article>
+          <article class="benefit reveal"><div class="benefit-mark"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.4 2.6 3.8 6 3.8 9s-1.4 6.4-3.8 9c-2.4-2.6-3.8-6-3.8-9s1.4-6.4 3.8-9z"/></svg></div><h3>Cross-Industry Experience</h3><p>Diverse experience across industries and operational environments.</p></article>
         </div>
       </div>
     </section>
@@ -161,54 +176,96 @@
         <div class="roadmap-item side-left">
           <div class="roadmap-dot"></div>
           <div class="roadmap-card">
+            <div class="roadmap-icon"><svg viewBox="0 0 24 24"><path d="M6 3h3l1.5 4-2 1.5c1 2.3 2.7 4 5 5l1.5-2 4 1.5v3c0 1-1 2-2 2-6 0-13-7-13-13 0-1 1-2 2-2z"/></svg></div>
             <span class="roadmap-num">01</span>
             <h3>Discovery Call</h3>
             <p>We start with a conversation, your goals, pain points, and what "better" looks like for your business.</p>
+            <ul class="roadmap-details">
+              <li>Current workflows, tools, and pain points</li>
+              <li>Goals for the engagement and what success looks like</li>
+              <li>Fit, scope, and next steps</li>
+            </ul>
+            <span class="roadmap-tag">~30–45 min call</span>
           </div>
         </div>
 
         <div class="roadmap-item side-right">
           <div class="roadmap-dot"></div>
           <div class="roadmap-card">
+            <div class="roadmap-icon"><svg viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M9.5 12.5h6M9.5 15.5h6M9.5 18.5h3.5"/></svg></div>
             <span class="roadmap-num">02</span>
             <h3>Proposal &amp; Roadmap</h3>
             <p>You get a clear scope, timeline, and investment laid out plainly, no surprises before anything begins.</p>
+            <ul class="roadmap-details">
+              <li>Defined scope and deliverables</li>
+              <li>Project timeline and milestones</li>
+              <li>Transparent investment, no hidden fees</li>
+            </ul>
+            <span class="roadmap-tag">Delivered in a few days</span>
           </div>
         </div>
 
         <div class="roadmap-item side-left">
           <div class="roadmap-dot"></div>
           <div class="roadmap-card">
+            <div class="roadmap-icon"><svg viewBox="0 0 24 24"><path d="M6 21V4"/><path d="M6 4.5h12l-3 4 3 4H6"/></svg></div>
             <span class="roadmap-num">03</span>
             <h3>Kickoff</h3>
             <p>We align on access, communication rhythm, and what success looks like for the engagement.</p>
+            <ul class="roadmap-details">
+              <li>Access to accounts, tools, and stakeholders</li>
+              <li>Communication rhythm and check-in cadence</li>
+              <li>Roles and responsibilities on both sides</li>
+            </ul>
+            <span class="roadmap-tag">Week one</span>
           </div>
         </div>
 
         <div class="roadmap-item side-right">
           <div class="roadmap-dot"></div>
           <div class="roadmap-card">
+            <div class="roadmap-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v2.4M12 18.6V21M4.6 6.6l1.7 1.4M17.7 16l1.7 1.4M4.6 17.4l1.7-1.4M17.7 8l1.7-1.4M3 12h2.4M18.6 12H21"/></svg></div>
             <span class="roadmap-num">04</span>
             <h3>Build &amp; Implement</h3>
             <p>We design and build the systems, workflows, brand, or site laid out in the roadmap.</p>
+            <ul class="roadmap-details">
+              <li>Systems, workflows, brand, or site development</li>
+              <li>Regular progress updates</li>
+              <li>Milestone check-ins along the way</li>
+            </ul>
+            <span class="roadmap-tag">The bulk of the engagement</span>
           </div>
         </div>
 
         <div class="roadmap-item side-left">
           <div class="roadmap-dot"></div>
           <div class="roadmap-card">
+            <div class="roadmap-icon"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.7-4.7"/></svg></div>
             <span class="roadmap-num">05</span>
             <h3>Review &amp; Refine</h3>
             <p>You test it, we gather feedback, and refine the details before anything goes live.</p>
+            <ul class="roadmap-details">
+              <li>Walkthrough and testing together</li>
+              <li>Feedback rounds and adjustments</li>
+              <li>Final quality check before launch</li>
+            </ul>
+            <span class="roadmap-tag">1–2 feedback rounds</span>
           </div>
         </div>
 
         <div class="roadmap-item side-right">
           <div class="roadmap-dot"></div>
           <div class="roadmap-card">
+            <div class="roadmap-icon"><svg viewBox="0 0 24 24"><path d="M12 2.5c3 2.2 4.8 5.9 4.8 9.6 0 1.4-.3 2.7-.8 3.9l-4 2.8-4-2.8c-.5-1.2-.8-2.5-.8-3.9 0-3.7 1.8-7.4 4.8-9.6z"/><circle cx="12" cy="10.5" r="1.5"/><path d="M9.3 16.8l-1.8 3.7M14.7 16.8l1.8 3.7"/></svg></div>
             <span class="roadmap-num">06</span>
             <h3>Launch</h3>
             <p>Everything goes live, documented and ready for your team to run with.</p>
+            <ul class="roadmap-details">
+              <li>Go-live and final checks</li>
+              <li>Documentation handed over</li>
+              <li>Walkthrough with your team</li>
+            </ul>
+            <span class="roadmap-tag">Launch day</span>
           </div>
         </div>
 
@@ -217,14 +274,28 @@
           <p class="roadmap-fork-label">Where the engagement goes from here</p>
           <div class="roadmap-fork-cards">
             <div class="roadmap-card roadmap-card-fork">
+              <div class="roadmap-icon"><svg viewBox="0 0 24 24"><path d="M3 12h13"/><path d="M11 6.5l6 5.5-6 5.5"/><path d="M21 4.5v15"/></svg></div>
               <span class="roadmap-num">07A</span>
               <h3>Hand-off</h3>
               <p>A clean transfer of ownership, documentation, and training, you're fully equipped to run it yourselves.</p>
+              <ul class="roadmap-details">
+                <li>Full ownership transfer</li>
+                <li>Documentation and training included</li>
+                <li>Available for questions after launch</li>
+              </ul>
+              <span class="roadmap-tag">One-time engagement</span>
             </div>
             <div class="roadmap-card roadmap-card-fork">
+              <div class="roadmap-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.2"/><circle cx="12" cy="12" r="3"/><path d="M5.9 5.9l2.6 2.6M18.1 5.9l-2.6 2.6M5.9 18.1l2.6-2.6M18.1 18.1l-2.6-2.6"/></svg></div>
               <span class="roadmap-num">07B</span>
               <h3>Ongoing Support</h3>
               <p>Recurring support built around the systems we put in place, so you're never without a partner.</p>
+              <ul class="roadmap-details">
+                <li>Recurring check-ins and maintenance</li>
+                <li>Priority support for issues or changes</li>
+                <li>Continued optimization over time</li>
+              </ul>
+              <span class="roadmap-tag">Recurring partnership</span>
             </div>
           </div>
         </div>
