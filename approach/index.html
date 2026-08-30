@@ -24,28 +24,27 @@
     .roadmap-section { position: relative; z-index: 0; background: var(--cream); border-top: 1px solid #f0eee9; overflow: hidden; }
     .roadmap-section .section-heading { margin-bottom: 8px; }
 
-    /* Animated wave background: three sets of thin wave-lines, tiled in both
-       directions (so they run the full height of the section, however long
-       the roadmap track ends up being) and staggered vertically so the sets
-       don't overlap. Each set drifts sideways at its own speed/direction. */
+    /* Animated wave background: layered filled "dune" ridges (light at the
+       seams, deepest orange at the center of each repeat) so the tile reads
+       as one continuous undulating field down the whole section, however
+       long the roadmap track ends up being, while still looping seamlessly
+       both vertically (tile top/bottom match) and horizontally (it drifts). */
     .roadmap-section::before {
       content: "";
       position: absolute;
       inset: 0;
       z-index: -1;
       pointer-events: none;
-      background-repeat: repeat, repeat, repeat;
-      background-position: 0 0, 0 60px, 0 140px;
-      background-size: 200px 220px, 260px 260px, 220px 180px;
-      background-image:
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='220' viewBox='0 0 200 220'%3E%3Cpath d='M0 110 Q50 90 100 110 T200 110' fill='none' stroke='%23f26a16' stroke-opacity='0.16' stroke-width='1.5'/%3E%3C/svg%3E"),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260' viewBox='0 0 260 260'%3E%3Cpath d='M0 130 Q65 105 130 130 T260 130' fill='none' stroke='%2307172c' stroke-opacity='0.08' stroke-width='1.5'/%3E%3C/svg%3E"),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='180' viewBox='0 0 220 180'%3E%3Cpath d='M0 90 Q55 70 110 90 T220 90' fill='none' stroke='%23f26a16' stroke-opacity='0.12' stroke-width='1.5'/%3E%3C/svg%3E");
-      animation: roadmap-waves 36s linear infinite;
+      background-repeat: repeat;
+      background-position: 0 0;
+      background-size: 720px 600px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='720' height='600' viewBox='0 0 720 600'%3E%3Crect width='720' height='600' fill='%23fdf7f1'/%3E%3Cpath d='M0,130 Q180,85 360,130 T720,130 L720,600 L0,600 Z' fill='%23f5dcc3'/%3E%3Cpath d='M0,260 Q180,210 360,260 T720,260 L720,600 L0,600 Z' fill='%23e8a878'/%3E%3Cpath d='M0,390 Q180,345 360,390 T720,390 L720,600 L0,600 Z' fill='%23f5dcc3'/%3E%3Cpath d='M0,520 Q180,480 360,520 T720,520 L720,600 L0,600 Z' fill='%23fdf7f1'/%3E%3C/svg%3E");
+      opacity: .82;
+      animation: roadmap-waves 40s linear infinite;
     }
     @keyframes roadmap-waves {
-      from { background-position: 0 0, 0 60px, 0 140px; }
-      to   { background-position: -200px 0, 260px 60px, -220px 140px; }
+      from { background-position: 0 0; }
+      to   { background-position: -720px 0; }
     }
     .roadmap-lead { max-width: 640px; margin: 18px auto 0; text-align: center; color: var(--muted); font-size: .96rem; }
 
