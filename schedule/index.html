@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Book a 30-minute consultation with Structure Collective directly online — pick a time that works for you.">
+  <meta name="theme-color" content="#07172c">
+  <title>Schedule a Consultation | Structure Collective</title>
+  <link rel="canonical" href="https://structurecollective.com/schedule/">
+  <link rel="icon" href="/assets/images/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/images/favicon-192.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    /* Schedule page — page-scoped additions only */
+    .scheduler-panel {
+      max-width: 900px; margin: 0 auto; background: var(--white);
+      border: 1px solid var(--line); box-shadow: var(--shadow);
+      padding: 8px;
+    }
+    .scheduler-panel iframe {
+      display: block; width: 100%; min-height: 700px; border: 0;
+    }
+    .scheduler-fallback {
+      max-width: 900px; margin: 22px auto 0; text-align: center;
+      color: var(--muted); font-size: .88rem;
+    }
+    .scheduler-fallback a { color: var(--orange); font-weight: 600; }
+  </style>
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Structure Collective">
+  <meta property="og:title" content="Schedule a Consultation | Structure Collective">
+  <meta property="og:description" content="Book a 30-minute consultation with Structure Collective directly online — pick a time that works for you.">
+  <meta property="og:url" content="https://structurecollective.com/schedule/">
+  <meta property="og:image" content="https://structurecollective.com/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Schedule a Consultation | Structure Collective">
+  <meta name="twitter:description" content="Book a 30-minute consultation with Structure Collective directly online — pick a time that works for you.">
+  <meta name="twitter:image" content="https://structurecollective.com/assets/images/og-image.png">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="home">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Structure Collective home">
+        <img src="/assets/images/structure-collective-logo.png" alt="Structure Collective">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span><span class="sr-only">Open menu</span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/services/">Services</a>
+        <a href="/about/">About</a>
+        <a href="/#approach">Approach</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+      <a class="button button-small header-cta" data-consultation-link href="/schedule/">Schedule a consultation</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="service-hero section-pad">
+      <div class="container">
+        <p class="breadcrumb"><a href="/">Home</a> <span>/</span> <span>Schedule</span></p>
+        <p class="eyebrow">Let's talk</p>
+        <h1 class="reveal">Schedule a Consultation</h1>
+        <p class="hero-intro reveal">Pick a time that works for you below. It's a 30-minute conversation to talk through your business's current operations and how Structure Collective can help you streamline workflows, strengthen systems, and support your growth.</p>
+      </div>
+    </section>
+
+    <section class="section-pad" style="padding-top:0">
+      <div class="container">
+        <div class="scheduler-panel reveal">
+          <iframe
+            src="https://scheduler.zoom.us/structurecollective?embed=true"
+            title="Schedule a consultation with Structure Collective"
+            loading="lazy"
+            allow="fullscreen">
+          </iframe>
+        </div>
+        <p class="scheduler-fallback">Prefer email? Reach us directly at <a data-email-link href="mailto:admin@structurecollective.com">admin@structurecollective.com</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><img src="/assets/images/structure-collective-logo.png" alt="Structure Collective"><p>Operational strategy.<br>Smarter solutions.</p></div>
+      <div><h3>Quick links</h3><a href="/">Home</a><a href="/services/">Services</a><a href="/about/">About</a><a href="/#approach">Approach</a><a href="/#contact">Contact</a></div>
+      <div><h3>Services</h3>
+        <a href="/services/workflow-optimization/">Workflow Optimization</a>
+        <a href="/services/brand-development/">Brand Development</a>
+        <a href="/services/website-design/">Website Design</a>
+        <a href="/services/technology-integration/">Technology Integration</a>
+        <a href="/services/operational-systems/">Operational Systems</a>
+        <a href="/services/project-coordination/">Project Coordination</a>
+      </div>
+      <div><h3>Get in touch</h3><a data-email-link href="mailto:admin@structurecollective.com">admin@structurecollective.com</a><p data-location>Greensboro, NC</p><div class="social-row"><a data-instagram-link href="#" aria-label="Instagram">ig</a><a data-linkedin-link href="#" aria-label="LinkedIn">in</a></div></div>
+    </div>
+    <div class="container copyright">&copy; <span id="year"></span> Structure Collective. All rights reserved.</div>
+  </footer>
+
+  <script src="/site-config.js"></script>
+  <script src="/script.js"></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Schedule a Consultation", "description": "Book a 30-minute consultation with Structure Collective directly online.", "url": "https://structurecollective.com/schedule/", "publisher": {"@type": "Organization", "name": "Structure Collective", "url": "https://structurecollective.com", "email": "admin@structurecollective.com", "address": {"@type": "PostalAddress", "addressLocality": "Greensboro", "addressRegion": "NC"}}}</script>
+</body>
+</html>

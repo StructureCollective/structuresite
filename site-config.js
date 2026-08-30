@@ -5,5 +5,5 @@ window.STRUCTURE_COLLECTIVE_CONFIG = {
   instagram: "https://www.instagram.com/_structurecollective/",
   linkedin: "https://www.linkedin.com/company/structurecollective/",
   consultationSubject: "Structure Collective Consultation Request",
-  consultationLink: "https://scheduler.zoom.us/structurecollective"
+  consultationLink: "/schedule/"
 };
