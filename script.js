@@ -16,7 +16,14 @@
 
   const email = config.email || 'admin@structurecollective.com';
   const subject = encodeURIComponent(config.consultationSubject || 'Consultation Request');
-  document.querySelectorAll('[data-consultation-link]').forEach(link => link.href = `mailto:${email}?subject=${subject}`);
+  const consultationLink = config.consultationLink || `mailto:${email}?subject=${subject}`;
+  document.querySelectorAll('[data-consultation-link]').forEach(link => {
+    link.href = consultationLink;
+    if (/^https?:/i.test(consultationLink)) {
+      link.target = '_blank';
+      link.rel = 'noopener';
+    }
+  });
   document.querySelectorAll('[data-email-link]').forEach(link => {
     link.href = `mailto:${email}`;
     link.textContent = email;

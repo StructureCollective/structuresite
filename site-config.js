@@ -4,5 +4,6 @@ window.STRUCTURE_COLLECTIVE_CONFIG = {
   location: "Greensboro, NC",
   instagram: "https://www.instagram.com/_structurecollective/",
   linkedin: "https://www.linkedin.com/company/structurecollective/",
-  consultationSubject: "Structure Collective Consultation Request"
+  consultationSubject: "Structure Collective Consultation Request",
+  consultationLink: "https://scheduler.zoom.us/structurecollective"
 };
