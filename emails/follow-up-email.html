@@ -1,0 +1,63 @@
+<!--
+  Structure Collective — Follow-Up Email Template
+  ------------------------------------------------
+  How to use:
+  1. Open this file in Sublime Text (not TextEdit — Rich Text/Smart Quotes will corrupt the HTML).
+  2. Find-and-replace the bracketed placeholders below with real values:
+       [Client Name]    -> the recipient's name
+       [Service Name]   -> the service they inquired about (e.g. "Brand Identity")
+       [Your Name]      -> your name
+       [Your Title]     -> your title, e.g. "Owner"
+       [Zoom Link]      -> your scheduling / Zoom link, or remove the button if not needed
+  3. Select everything inside the <div id="email-content"> ... </div> wrapper below
+     (not this comment block), copy it, and paste directly into a new Gmail/Outlook
+     compose window. Most email clients keep inline styles intact on paste.
+  4. This template matches structurecollective.com's live color palette and typography
+     (navy #07172c / orange #f26a16, DM Sans + Playfair Display) as of Aug 2026 —
+     re-check styles.css if the site's design system changes.
+-->
+<div id="email-content" style="font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;max-width:600px;margin:0 auto;background:#fbfaf7;">
+
+  <!-- Top wordmark -->
+  <div style="padding:28px 32px 20px;text-align:left;">
+    <img src="https://structurecollective.com/assets/images/structure-collective-logo.png" alt="Structure Collective" style="height:48px;width:auto;display:block;">
+  </div>
+
+  <!-- Card -->
+  <div style="background:#ffffff;margin:0 24px;border:1px solid #e7e4df;box-shadow:0 18px 50px rgba(7,23,44,0.09);">
+
+    <!-- Navy header -->
+    <div style="background:#07172c;padding:26px 36px;">
+      <p style="margin:0;color:#ffffff;font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:600;letter-spacing:.01em;">Following up on your proposal</p>
+    </div>
+
+    <!-- Body -->
+    <div style="padding:34px 36px 8px;color:#07172c;font-size:15px;line-height:1.65;">
+      <p style="margin:0 0 18px;">Hi, [Client Name]</p>
+
+      <p style="margin:0 0 18px;">Thank you for your interest in our <strong>[Service Name]</strong> service. Your proposal has been sent, and we're happy to hop on a Zoom call to walk through it and answer any questions you may have.</p>
+
+      <div style="background:#fbfaf7;border:1px solid #e7e4df;padding:18px 20px;margin:0 0 24px;">
+        <p style="margin:0 0 8px;font-weight:700;color:#07172c;">What's next</p>
+        <p style="margin:0 0 6px;color:#606a76;">&bull; Review the proposal at your own pace — no rush.</p>
+        <p style="margin:0 0 6px;color:#606a76;">&bull; Reply here with any questions, or grab time on our calendar below.</p>
+        <p style="margin:0;color:#606a76;">&bull; Once you're ready to move forward, we'll confirm scope and get started.</p>
+      </div>
+
+      <!-- CTA button, matches .button style: sharp corners, orange fill, uppercase bold -->
+      <div style="text-align:left;margin:0 0 28px;">
+        <a href="https://scheduler.zoom.us/structurecollective" style="display:inline-block;background:#f26a16;color:#ffffff;text-decoration:none;font-weight:700;text-transform:uppercase;letter-spacing:.035em;font-size:13px;padding:0 24px;line-height:48px;min-height:48px;">Schedule a Zoom Call</a>
+      </div>
+
+      <p style="margin:0 0 6px;">Looking forward to working together.</p>
+      <p style="margin:0 0 28px;">Best,<br>[Your Name] | [Your Title]<br>Structure Collective</p>
+    </div>
+  </div>
+
+  <!-- Footer, matches .site-footer: solid navy background -->
+  <div style="background:#07172c;padding:26px 36px;margin-top:24px;text-align:center;">
+    <p style="margin:0 0 6px;color:#bcc7d5;font-size:12px;letter-spacing:.02em;">Structure Collective</p>
+    <p style="margin:0;color:#91a0b2;font-size:11px;">structurecollective.com</p>
+  </div>
+
+</div>
